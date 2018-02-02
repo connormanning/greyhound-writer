@@ -8,7 +8,7 @@ Git and docker-compose are required to follow these instructions.
 
 ### Index data
 
-First, index some data with Entwine.  We'll assume that `/entwine` is the root location for Entwine-indexed data.
+First, index some data with Entwine.  We'll assume that `~/entwine` is the root location for Entwine-indexed data.
 
 ```
 docker run -it -v ~/entwine:/entwine connormanning/entwine build \
