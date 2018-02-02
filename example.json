@@ -1,0 +1,21 @@
+[
+    {
+        "type": "filters.smrf"
+    },
+    {
+        "type": "filters.ferry",
+        "dimensions": "Classification=NAME/Smrf"
+    },
+    {
+        "type": "filters.assign",
+        "assignment": "Classification[:]=0"
+    },
+    {
+        "type": "filters.pmf"
+    },
+    {
+        "type": "filters.ferry",
+        "dimensions": "Classification=NAME/Pmf"
+    }
+]
+

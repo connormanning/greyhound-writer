@@ -1,0 +1,17 @@
+version: '3'
+services:
+    greyhound:
+        image: connormanning/greyhound
+        container_name: greyhound
+        ports:
+            - 8080:8080
+        volumes:
+            - ${ENTWINE-~/entwine}:/greyhound
+        command: "-w"   # Allow writes.
+    writer:
+        image: connormanning/greyhound-writer
+        container_name: writer
+        volumes:
+            - ${PIPELINE-.}:/data
+        entrypoint: tail -f /dev/null
+
