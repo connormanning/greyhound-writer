@@ -43,7 +43,7 @@ docker exec -it writer write \
     -n Example
 ```
 
-This invocation, with the provided `example.json`, will create three new attributes named `Example/Tile`, `Example/Smrf`, and `Example/Pmf`.  Since we passed only the resource name `autzen` rather than the full server path, the script expanded this out to the default server `http://greyhound:8080/resource/autzen` (see `docker-compose.yml`).  Now we can browse to speck.ly's "Color Channels" pane and visualize our new attributes [here](http://speck.ly/?s=localhost:8080&r=autzen).
+This invocation, with the provided `example.json`, will create three new attributes named `Example/Tile`, `Example/Smrf`, and `Example/Pmf`.  Since we passed only the resource name `autzen` rather than the full server path, the script expanded this out to the default server `http://greyhound:8080/resource/autzen` (see `docker-compose.yml`).  Now we can browse to speck.ly's "Color Channels" pane and visualize our new attributes [here](http://speck.ly/?s=localhost%3A8080&r=autzen&ca=0.014&ce=60.918&ct=636722.395%2C850476.939%2C510.7&cd=3083.414&cmd=6864.633&ps=2&pa=0.1&ze=1&c0s=local%3A%2F%2Ffield-color%3Ffield%3DExample%2FTile&c0c=14&c1s=local%3A%2F%2Ffield-color%3Ffield%3DExample%2FSmrf&c1c=60&c2s=local%3A%2F%2Ffield-color%3Ffield%3DExample%2FPmf&c2c=1).  The `Example/Tile` attribute was added by the algorithm-runner script and not explicitly specified in `example.json`.
 
 There should now be a directory called `pipelines/Example` containing the constituent PDAL pipelines for this run of filtering.
 
